@@ -57,6 +57,13 @@ namespace ContactList
         List<Contact> contactModel = Contact.GetAll();
         return View["contacts.cshtml", contactModel];
       };
+      Get["/contacts/delete/all/confirmation"] = _ => {
+        return View["deleteAllConfirmation.cshtml"];
+      };
+      Post["/contacts/delete/all"] = _ => {
+        List<Contact> contactModel = Contact.GetAll();
+        return View["contacts.cshtml", contactModel];
+      };
     }
   }
 }
