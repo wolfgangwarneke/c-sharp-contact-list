@@ -27,6 +27,10 @@ namespace ContactList.Objects
     {
       return contactInstances;
     }
+    public static void DeleteAll()
+    {
+      contactInstances.Clear();
+    }
 
     public int GetId()
     {
