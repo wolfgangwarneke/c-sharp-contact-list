@@ -1,0 +1,10 @@
+<h1>Edit Name</h1>
+
+<form action="/contacts/edit/name/@Model.GetId()" method="post">
+  <label for="firstName">First name</label>
+  <input type="text" name="firstName" id="firstName" value="@Model.GetFirstName()"><br>
+  <label for="lastName">Last name</label>
+  <input type="text" name="lastName" id="lastName" value="@Model.GetLastName()"><br>
+  <button type="submit">Edit name</button>
+</form>
+<a href="/contacts">Go back</a>

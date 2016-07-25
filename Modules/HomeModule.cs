@@ -27,9 +27,15 @@ namespace ContactList
         List<Contact> contactModel = Contact.GetAll();
         return View["editContacts.cshtml", contactModel];
       };
+      Get["/contacts/edit/form/name/{id}"] = parameters => {
+        Contact contactToEdit = Contact.Find(parameters.id);
+        return View["editNameForm.cshtml", contactToEdit];
+      };
       Post["/contacts/edit/name/{id}"] = parameters => {
+        Contact contactToEdit = Contact.Find(parameters.id);
+        contactToEdit.SetFullName(Request.Form["firstName"], Request.Form["lastName"]);
         List<Contact> contactModel = Contact.GetAll();
-        return View["editContacts.cshtml", contactModel];
+        return View["contacts.cshtml", contactModel];
       };
     }
   }

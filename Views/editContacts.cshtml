@@ -10,19 +10,13 @@
 @foreach (var contact in Model) {
   <tr>
     <td class="name">
-      <form action="/edit/name/@contact.GetId()">
-      <button type="submit">@contact.GetFullName()</button>
-      </form>
+      <a href="/contacts/edit/form/name/@contact.GetId()">@contact.GetFullName()</a>
     </td>
-    <td class="email">
-      <form action="/edit/email/@contact.GetId()">
-      <button type="submit">@contact.GetEmail()</button>
-      </form>
+    <td class="name">
+      <a href="/contacts/edit/form/email/@contact.GetId()">@contact.GetEmail()</a>
     </td>
-    <td class="phoneNumber">
-      <form action="/edit/phoneNumber/@contact.GetId()">
-      <button type="submit">@contact.GetPhoneNumber()</button>
-      </form>
+    <td class="name">
+      <a href="/contacts/edit/form/phone/@contact.GetId()">@contact.GetPhoneNumber()</a>
     </td>
   </tr>
 }
