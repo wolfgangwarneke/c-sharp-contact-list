@@ -1,8 +1,17 @@
 <h1>Contacts</h1>
 
-<ul>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone #</td>
+  </tr>
 @foreach (var contact in Model) {
-  <li>@contact.GetFullName() /// @contact.GetEmail() /// @contact.GetPhoneNumber()</li>
+  <tr>
+    <td>@contact.GetFullName()</td>
+    <td>@contact.GetEmail()</td>
+    <td>@contact.GetPhoneNumber()</td>
+  </tr>
 }
-</ul>
+</table>
 <a href="/contacts/new">Add New Contact</a>
