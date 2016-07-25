@@ -19,7 +19,7 @@ namespace ContactList.Objects
       _lastName = lastName;
       _email = email;
       _phoneNumber = phoneNumber;
-      _id = contactInstances.Count();
+      _id = contactInstances.Count;
       contactInstances.Add(this);
     }
 

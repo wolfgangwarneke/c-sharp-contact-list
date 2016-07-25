@@ -1,4 +1,5 @@
 <h1>Contacts</h1>
+<h2>EDIT CONTACTS</h2>
 
 <table>
   <tr>
@@ -9,11 +10,20 @@
 @foreach (var contact in Model) {
   <tr>
     <td class="name">
-      <form action="/edit/name/@contact.GetId">
-      @contact.GetFullName()
+      <form action="/edit/name/@contact.GetId()">
+      <button type="submit">@contact.GetFullName()</button>
+      </form>
     </td>
-    <td class="email">@contact.GetEmail()</td>
-    <td class="phoneNumber">@contact.GetPhoneNumber()</td>
+    <td class="email">
+      <form action="/edit/email/@contact.GetId()">
+      <button type="submit">@contact.GetEmail()</button>
+      </form>
+    </td>
+    <td class="phoneNumber">
+      <form action="/edit/phoneNumber/@contact.GetId()">
+      <button type="submit">@contact.GetPhoneNumber()</button>
+      </form>
+    </td>
   </tr>
 }
 </table>
