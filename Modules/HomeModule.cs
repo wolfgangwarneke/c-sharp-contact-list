@@ -61,7 +61,7 @@ namespace ContactList
         return View["deleteAllConfirmation.cshtml"];
       };
       Post["/contacts/delete/all"] = _ => {
-        Contact.DeleteAll();
+        if (Request.Form["confirmation"] == "yes") Contact.DeleteAll();
         List<Contact> contactModel = Contact.GetAll();
         return View["contacts.cshtml", contactModel];
       };

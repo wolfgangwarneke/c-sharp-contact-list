@@ -1,8 +1,8 @@
 <form action="/contacts/delete/all/" method="post">
-  <label for="confirmation">Are you sure you want to delete all contacts?</label><br>
-  <label for="yes">Yes</label>
-  <input type="radio" name="yes" id="yes" value="yes"><br>
-  <label for="no">No</label>
-  <input type="radio" name="no" id="no" value="no"><br>
+  <fieldset>
+    <legend>Are you sure you want to delete all contacts?</legend>
+    <input type="radio" name="confirmation" value="yes">Yes<br>
+    <input type="radio" name="confirmation" value="no">No<br>
+  </fieldset>
   <button type="submit">Confirm</button>
 </form>
