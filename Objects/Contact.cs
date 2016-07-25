@@ -36,6 +36,10 @@ namespace ContactList.Objects
     {
       return _id;
     }
+    public void SetId(int id)
+    {
+      _id = id;
+    }
 
     public static Contact Find(int id)
     {
@@ -44,6 +48,11 @@ namespace ContactList.Objects
     public static void DeleteById(int id)
     {
       contactInstances.RemoveAt(id);
+      List<Contact> contactsToUpdateId = Contact.GetAll();
+      for (var i = 0; i < contactsToUpdateId.Count; i ++)
+      {
+        contactsToUpdateId[i].SetId(i);
+      }
     }
 
     public string GetFullName()
