@@ -21,7 +21,7 @@ namespace ContactList.Objects
       contactInstances.Add(this);
     }
 
-    public static List<Contact> GetAllContacts()
+    public static List<Contact> GetAll()
     {
       return contactInstances;
     }
