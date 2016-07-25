@@ -10,6 +10,7 @@ namespace ContactList.Objects
     private string _lastName;
     private string _email;
     private string _phoneNumber;
+    private int _id;
     //phone number is string so user can choose formatting
 
     public Contact(string firstName, string lastName, string email, string phoneNumber)
@@ -18,12 +19,18 @@ namespace ContactList.Objects
       _lastName = lastName;
       _email = email;
       _phoneNumber = phoneNumber;
+      _id = contactInstances.Count();
       contactInstances.Add(this);
     }
 
     public static List<Contact> GetAll()
     {
       return contactInstances;
+    }
+
+    public int GetId()
+    {
+      return _id;
     }
 
     public string GetFullName()
