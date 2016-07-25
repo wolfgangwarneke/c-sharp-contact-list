@@ -2,7 +2,7 @@
 
 <form action="/contacts/edit/email/@Model.GetId()" method="post">
   <label for="email">Email</label>
-  <input type="text" name="email" id="email" value="@Model.GetEmail()"><br>
+  <input type="text" name="email" id="email" value="@Model.GetEmail()" required><br>
   <button type="submit">Edit email</button>
 </form>
 <a href="/contacts">Go back</a>
