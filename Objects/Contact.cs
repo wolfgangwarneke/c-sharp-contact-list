@@ -5,7 +5,7 @@ namespace ContactList.Objects
 {
   public class Contact
   {
-    private static List<Contact> contactInstances;
+    private static List<Contact> contactInstances = new List<Contact> {};
     private string _firstName;
     private string _lastName;
     private string _email;
