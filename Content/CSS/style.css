@@ -33,10 +33,6 @@ h1 {
   margin-bottom: 3px;
 }
 
-a {
-  text-decoration: none;
-}
-
 #actions a {
   display: inline-block;
   margin: auto;
@@ -51,7 +47,7 @@ table {
   background-color: #76C8C8;
   margin: 10px auto;
   border: 3px dashed RGBA(0, 0, 0, 0.4);
-  border-radius: 9px
+  border-radius: 9px;
 }
 
 tr:nth-child(even) {
@@ -85,4 +81,24 @@ input {
 
 button {
   font-family: cursive;
+}
+
+a:link {
+  text-decoration: none;
+  color: #074343;
+  text-shadow: 3px 3px 10px #fff;
+}
+
+a:visited {
+  color: #074343;
+}
+
+a:hover {
+  color: #A0FDFD;
+  text-shadow: 1px 1px #000;
+}
+
+#edit a:hover {
+  color: #002828;
+  text-shadow: 1px 1px #1EEDED;
 }
