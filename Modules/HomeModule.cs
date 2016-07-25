@@ -65,6 +65,10 @@ namespace ContactList
         List<Contact> contactModel = Contact.GetAll();
         return View["contacts.cshtml", contactModel];
       };
+      Get["/contacts/delete/one-or-more"] = _ => {
+        List<Contact> contactModel = Contact.GetAll();
+        return View["deleteOneOrMoreContacts.cshtml", contactModel];
+      };
     }
   }
 }
