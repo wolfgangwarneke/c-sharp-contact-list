@@ -27,6 +27,10 @@ namespace ContactList
         List<Contact> contactModel = Contact.GetAll();
         return View["editContacts.cshtml", contactModel];
       };
+      Post["/contacts/edit/name/{id}"] = parameters => {
+        List<Contact> contactModel = Contact.GetAll();
+        return View["editContacts.cshtml", contactModel];
+      };
     }
   }
 }

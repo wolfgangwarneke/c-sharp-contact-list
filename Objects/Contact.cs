@@ -33,6 +33,11 @@ namespace ContactList.Objects
       return _id;
     }
 
+    public static Contact Find(int id)
+    {
+      return contactInstances[id];
+    }
+
     public string GetFullName()
     {
       return this.GetFirstName() + " " + this.GetLastName();
