@@ -16,7 +16,7 @@ namespace ContactList
         return View["contacts.cshtml", contactModel];
       };
       Get["/contacts/new"] = _ => {
-        return View["addContact.cshtml"];
+        return View["addContactForm.cshtml"];
       };
       Post["/contacts/add"] = _ => {
         Contact newContact = new Contact(Request.Form["firstName"], Request.Form["lastName"], Request.Form["email"], Request.Form["phoneNumber"]);
