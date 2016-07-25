@@ -26,6 +26,17 @@ namespace ContactList.Objects
       return contactInstances;
     }
 
+    public string GetFullName()
+    {
+      return this.GetFirstName() + " " + this.GetLastName();
+    }
+
+    public void SetFullName(string firstName, string lastName)
+    {
+      this.SetFirstName(firstName);
+      this.SetLastName(lastName);
+    }
+
     public string GetFirstName()
     {
       return _firstName;
