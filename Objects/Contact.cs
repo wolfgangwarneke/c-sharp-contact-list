@@ -48,6 +48,10 @@ namespace ContactList.Objects
     public static void DeleteById(int id)
     {
       contactInstances.RemoveAt(id);
+    }
+
+    public static void RefreshIds()
+    {
       List<Contact> contactsToUpdateId = Contact.GetAll();
       for (var i = 0; i < contactsToUpdateId.Count; i ++)
       {

@@ -1,5 +1,6 @@
 using Nancy;
 using ContactList.Objects;
+using System;
 using System.Collections.Generic;
 
 namespace ContactList
@@ -69,8 +70,17 @@ namespace ContactList
         List<Contact> contactModel = Contact.GetAll();
         return View["deleteOneOrMoreContacts.cshtml", contactModel];
       };
-      // Post["/contacts/delete/one-or-more"] = _ => {
-      // };
+      Post["/contacts/delete/one-or-more"] = _ => {
+        int contactsDeletedCounter= 0;
+        foreach (string contactId in Request.Form.Keys)
+        {
+          Contact.DeleteById(Int32.Parse(contactId)-contactsDeletedCounter);
+          contactsDeletedCounter++;
+        }
+        Contact.RefreshIds();
+        List<Contact> contactModel = Contact.GetAll();
+        return View["contacts.cshtml", contactModel];
+      };
     }
   }
 }
