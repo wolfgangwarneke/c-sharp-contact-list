@@ -18,6 +18,7 @@ namespace ContactList.Objects
       _lastName = lastName;
       _email = email;
       _phoneNumber = phoneNumber;
+      contactInstances.Add(this);
     }
   }
 }
