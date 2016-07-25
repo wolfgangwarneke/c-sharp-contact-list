@@ -1,27 +1,35 @@
-<h1>Contacts</h1>
-<h2>EDIT CONTACTS</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/CSS">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Contacts</h1>
+      <h2>EDIT CONTACTS</h2>
 
-<table>
-  <tr>
-    <td>Name</td>
-    <td>Email</td>
-    <td>Phone #</td>
-  </tr>
-@foreach (var contact in Model) {
-  <tr>
-    <td class="name">
-      <a href="/contacts/edit/form/name/@contact.GetId()">@contact.GetFullName()</a>
-    </td>
-    <td class="name">
-      <a href="/contacts/edit/form/email/@contact.GetId()">@contact.GetEmail()</a>
-    </td>
-    <td class="name">
-      <a href="/contacts/edit/form/phone/@contact.GetId()">@contact.GetPhoneNumber()</a>
-    </td>
-  </tr>
-}
-</table>
-<a href="/contacts/new">Add New Contact</a>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="/Content/JS/scripts.js"></script>
+      <table id="edit">
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Phone #</td>
+        </tr>
+      @foreach (var contact in Model) {
+        <tr>
+          <td class="name">
+            <a href="/contacts/edit/form/name/@contact.GetId()">@contact.GetFullName()</a>
+          </td>
+          <td class="name">
+            <a href="/contacts/edit/form/email/@contact.GetId()">@contact.GetEmail()</a>
+          </td>
+          <td class="name">
+            <a href="/contacts/edit/form/phone/@contact.GetId()">@contact.GetPhoneNumber()</a>
+          </td>
+        </tr>
+      }
+      </table>
+      <a href="/contacts/new">Add New Contact</a>
+    </div>
+  </body>
+</html>

@@ -1,8 +1,20 @@
-<h1>Edit Phone</h1>
-
-<form action="/contacts/edit/phone/@Model.GetId()" method="post">
-  <label for="phoneNumber">Phone #</label>
-  <input type="text" name="phoneNumber" id="phoneNumber" value="@Model.GetEmail()" required><br>
-  <button type="submit">Edit phone #</button>
-</form>
-<a href="/contacts">Go back</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/CSS">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Edit Phone</h1>
+      <div id="formWrapper">
+        <form action="/contacts/edit/phone/@Model.GetId()" method="post">
+          <label for="phoneNumber">Phone #</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" value="@Model.GetEmail()" required><br>
+          <button type="submit">Edit phone #</button>
+        </form>
+      </div>
+      <a href="/contacts">Go back</a>
+    </div>
+  </body>
+</html>

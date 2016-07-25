@@ -1,0 +1,88 @@
+body {
+  background-color: #D6F7F7;
+  font-family: cursive;
+}
+
+h1 {
+  margin-top: 12px;
+  font-variant: small-caps;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+#wrapper {
+  background-color: #49A1A1;
+  width: 68%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 4px 6px 10px #224;
+}
+
+#formWrapper {
+  background-color: #76C8C8;
+  width: 70%;
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+}
+
+#formWrapper input {
+  margin-bottom: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#actions a {
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 3px;
+  background-color: #76C8C8;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+table {
+  background-color: #76C8C8;
+  margin: 10px auto;
+  border: 3px dashed RGBA(0, 0, 0, 0.4);
+  border-radius: 9px
+}
+
+tr:nth-child(even) {
+  background-color: #e4ffff;
+}
+
+tr:nth-child(odd) {
+  background-color: #D6F7F7;
+}
+
+tr:first-of-type {
+  background-color: #A7E5E5;
+}
+
+td {
+  padding: 3px;
+}
+
+input {
+  background-color: #d4ffff;
+  border-radius: 7px;
+}
+
+#edit td:hover {
+  background-color: #c4ffff;
+}
+
+#edit tr:first-of-type td:hover {
+  background-color: #A7E5E5;
+}
+
+button {
+  font-family: cursive;
+}

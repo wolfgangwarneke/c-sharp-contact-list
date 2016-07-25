@@ -1,26 +1,37 @@
-<h1>Delete Contacts</h1>
-<form action="/contacts/delete/one-or-more" method="post">
-  <table>
-    <tr>
-      <td>Name</td>
-      <td>Email</td>
-      <td>Phone #</td>
-      <td>DELETE</td>
-    </tr>
-  @foreach (var contact in Model) {
-    <tr>
-      <td>@contact.GetFullName()</td>
-      <td>@contact.GetEmail()</td>
-      <td>@contact.GetPhoneNumber()</td>
-      <td><input type="checkbox" name="@contact.GetId()" id="@contact.GetId()" value=@contact.GetId()></td>
-    </tr>
-  }
-    <tr>
-      <td></td><td></td><td></td>
-      <td><button type="submit">Delete them</button></td>
-    </tr>
-  </table>
-</form>
-<a href="/contacts/new">Add New Contact</a>
-<a href="/contacts/edit">Edit Entry</a>
-<a href="/contacts/delete/all/confirmation">Delete All Contacts</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/CSS">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Delete Contacts</h1>
+      <form action="/contacts/delete/one-or-more" method="post">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone #</td>
+            <td>DELETE</td>
+          </tr>
+        @foreach (var contact in Model) {
+          <tr>
+            <td>@contact.GetFullName()</td>
+            <td>@contact.GetEmail()</td>
+            <td>@contact.GetPhoneNumber()</td>
+            <td><input type="checkbox" name="@contact.GetId()" id="@contact.GetId()" value=@contact.GetId()></td>
+          </tr>
+        }
+          <tr>
+            <td></td><td></td><td></td>
+            <td><button type="submit">Delete them</button></td>
+          </tr>
+        </table>
+      </form>
+      <a href="/contacts/new">Add New Contact</a>
+      <a href="/contacts/edit">Edit Entry</a>
+      <a href="/contacts/delete/all/confirmation">Delete All Contacts</a>
+    </div>
+  </body>
+</html>

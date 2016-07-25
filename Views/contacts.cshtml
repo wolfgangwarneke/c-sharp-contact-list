@@ -1,20 +1,32 @@
-<h1>Contacts</h1>
-
-<table>
-  <tr>
-    <td>Name</td>
-    <td>Email</td>
-    <td>Phone #</td>
-  </tr>
-@foreach (var contact in Model) {
-  <tr>
-    <td>@contact.GetFullName()</td>
-    <td>@contact.GetEmail()</td>
-    <td>@contact.GetPhoneNumber()</td>
-  </tr>
-}
-</table>
-<a href="/contacts/new">Add New Contact</a>
-<a href="/contacts/edit">Edit Entry</a>
-<a href="/contacts/delete/all/confirmation">Delete All Contacts</a>
-<a href="/contacts/delete/one-or-more/">Delete One (or more) Contact(s)</a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/CSS">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Contacts</h1>
+      <span id="actions">
+        <a href="/contacts/new">Add New Contact</a>
+        <a href="/contacts/edit">Edit Entry</a>
+        <a href="/contacts/delete/all/confirmation">Delete All Contacts</a>
+        <a href="/contacts/delete/one-or-more/">Delete One (or more) Contact(s)</a>
+      </span>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Phone #</td>
+        </tr>
+      @foreach (var contact in Model) {
+        <tr>
+          <td>@contact.GetFullName()</td>
+          <td>@contact.GetEmail()</td>
+          <td>@contact.GetPhoneNumber()</td>
+        </tr>
+      }
+      </table>
+    </div>
+  </body>
+</html>

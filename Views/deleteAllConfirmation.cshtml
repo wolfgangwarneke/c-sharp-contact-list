@@ -1,8 +1,21 @@
-<form action="/contacts/delete/all/" method="post">
-  <fieldset>
-    <legend>Are you sure you want to delete all contacts?</legend>
-    <input type="radio" name="confirmation" value="yes">Yes<br>
-    <input type="radio" name="confirmation" value="no">No<br>
-  </fieldset>
-  <button type="submit">Confirm</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact List</title>
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/CSS">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="formWrapper">
+        <form action="/contacts/delete/all/" method="post">
+          <fieldset>
+            <legend>Are you sure you want to delete all contacts?</legend>
+            <input type="radio" name="confirmation" value="yes">Yes<br>
+            <input type="radio" name="confirmation" value="no">No<br>
+          </fieldset>
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
