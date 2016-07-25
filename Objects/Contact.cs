@@ -41,6 +41,10 @@ namespace ContactList.Objects
     {
       return contactInstances[id];
     }
+    public static void DeleteById(int id)
+    {
+      contactInstances.RemoveAt(id);
+    }
 
     public string GetFullName()
     {
